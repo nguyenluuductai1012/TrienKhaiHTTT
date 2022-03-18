@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="view_hocsinh_search">
+			<field name="name">hocsinh.search</field>
+			<field name="model">hocsinh</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search string="Tìm kiếm thông tin sản phẩm">
+					<field name="masp" string="Mã sản phẩm: "/>
+				</search>
+			</field>
+		</record>	
+		<!--Sản phẩm tree view-->
+		<record model="ir.ui.view" id="view_hocsinh_tree">
+			<field name="name">hocsinh.tree</field>
+			<field name="model">hocsinh</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh mục sản phẩm">
+					<field name="masp" string="Mã sản phẩm:"/>
+					<field name="tensp" string="Tên sản phẩm:"/>
+					<field name="maloai" string="Mã loại: "/>
+					<field name="sl" string="Số lượng: "/>
+					<field name="dg" string="Đơn giá: "/>
+				</tree>
+			</field>
+		</record>
+		
+		<!--Sản phẩm form view-->
+		<record model="ir.ui.view" id="view_hocsinh_form">
+			<field name="name">hocsinh.form</field>
+			<field name="model">hocsinh</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Sản phẩm">
+					<field name="masp" string="Mã sản phẩm:"/>
+					<field name="tensp" string="Tên sản phẩm:"/>
+					<field name="maloai" string="Mã loại: "/>
+					<field name="sl" string="Số lượng: "/>
+					<field name="dg" string="Đơn giá: "/>
+				</form>
+			</field>
+		</record>
+
+		<!--Loại sản phẩm tree view-->
+		<record model="ir.ui.view" id="view_lop_tree">
+			<field name="name">lop.tree</field>
+			<field name="model">lop</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh mục loại sản phẩm">
+					<field name="maDM" string="Mã danh mục:"/>
+					<field name="tenDM" string="Tên danh mục:"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--Loại sản phẩm form view-->
+		<record model="ir.ui.view" id="view_lop_form">
+			<field name="name">lop.form</field>
+			<field name="model">lop</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Sản phẩm">
+					<field name="maDM" string="Mã danh mục:"/>
+					<field name="tenDM" string="Tên danh mục:"/>
+				</form>
+			</field>
+		</record>
+
+		Phân phối sản phẩm tree view
+		<record model="ir.ui.view" id="view_phanphoihocsinh_tree">
+			<field name="name">phanphoihocsinh.tree</field>
+			<field name="model">phanphoihocsinh</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh mục phân phối sản phẩm">
+					<field name="tendl" string="Tên đại lý:"/>
+					<field name="diachidl" string="Địa chỉ đại lý:"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--Phân phối sản phẩm form view-->
+		<record model="ir.ui.view" id="view_phanphoihocsinh_form">
+			<field name="name">phanphoihocsinh.form</field>
+			<field name="model">phanphoihocsinh</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Đại lý">
+					<field name="tendl" string="Tên đại lý:"/>
+					<field name="diachidl" string="Địa chỉ đại lý:"/>
+				</form>
+			</field>
+		</record>
+
+		<!--Sản phẩm Action-->
+		<record model="ir.actions.act_window" id="action_hocsinh">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">hocsinh</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+		 <record model="ir.actions.act_window" id="action_hocsinh_tree">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">hocsinh</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+		 </record>
+
+		<!--Loại sản phẩm Action-->
+		<record model="ir.actions.act_window" id="action_lop">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">lop</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		 <record model="ir.actions.act_window" id="action_lop_tree">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">lop</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+		<!--Phân loại sản phẩm Action-->
+		<record model="ir.actions.act_window" id="action_phanphoihocsinh">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">phanphoihocsinh</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		 <record model="ir.actions.act_window" id="action_phanphoihocsinh_tree">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">phanphoihocsinh</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+	</data>
+</openerp>

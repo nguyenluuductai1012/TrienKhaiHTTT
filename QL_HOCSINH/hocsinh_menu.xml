@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<!--Học sinh Menu-->
+		<menuitem id="hocsinh_parent" name="Quản Học Sinh" icon="STOCK_OPEN"/>
+		<menuitem id="menu_hocsinh_parent" name="Nhập học sinh" parent="hocsinh_parent"/>
+		<menuitem action="action_hocsinh" id="menu_hocsinh_hocsinh" parent="menu_hocsinh_parent" string="Result"/>
+		<menuitem action="action_hocsinh_tree" name="Danh sách học sinh" id="menu_hocsinh_tree" parent="menu_hocsinh_parent" string="Danh sách sản phẩm"/>
+
+	<!--Lớp Menu-->
+		<menuitem id="hocsinh_parent" name="Quản lý Lớp" icon="STOCK_OPEN"/>
+		<menuitem id="menu_lop_parent" name="Thêm sách lớp" parent="hocsinh_parent"/>
+		<menuitem action="action_lop" id="menu_lop_lop" parent="menu_lop_parent" string="Result"/>
+		<menuitem action="action_lop_tree" name="Danh sách lớp" id="menu_lop_tree" parent="menu_lop_parent" string="Danh sách loại sản phẩm"/>
+	</data>
+</openerp> 	
