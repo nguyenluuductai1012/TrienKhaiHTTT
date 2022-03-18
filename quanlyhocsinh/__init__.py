@@ -1,2 +1,0 @@
-import sanpham
-import loaisanpham
