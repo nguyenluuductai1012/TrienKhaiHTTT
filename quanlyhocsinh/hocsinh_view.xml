@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<record model="ir.ui.view" id="view_hocsinh_search">
+			<field name="name">hocsinh.search</field>
+			<field name="model">hocsinh</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search string="Tìm kiếm thông tin học sinh ">
+					<field name="mahs" string="Mã Học Sinh : "/>
+				</search>
+			</field>
+		</record>	
+		<!--Học sinh tree view-->
+		<record model="ir.ui.view" id="view_hocsinh_tree">
+			<field name="name">hocsinh.tree</field>
+			<field name="model">hocsinh</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh sách học sinh">
+					<field name="mahs" string="Mã Học Sinh "/>
+					<field name="tenhs" string="Tên Học Sinh "/>
+					<field name="malop" string="Lớp "/>
+					<field name="ngaysinh" string="Ngày sinh"/>
+					<field name="gioitinh" string="Giới tính "/>
+					<field name="diachi" string="Địa chỉ "/>
+					<field name="sdt" string="Số điện thoại "/>
+				</tree>
+			</field>
+		</record>
+		
+		<!--Học sinh form view-->
+		<record model="ir.ui.view" id="view_hocsinh_form">
+			<field name="name">hocsinh.form</field>
+			<field name="model">hocsinh</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Sản phẩm">
+					<field name="mahs" string="Mã Học Sinh "/>
+					<field name="tenhs" string="Tên Học Sinh "/>
+					<field name="malop" string="Lớp "/>
+					<field name="ngaysinh" string="Ngày sinh"/>
+					<field name="gioitinh" string="Giới tính "/>
+					<field name="diachi" string="Địa chỉ "/>
+					<field name="sdt" string="Số điện thoại "/>
+				</form>
+			</field>
+		</record>
+
+		<!--Lớp tree view-->
+		<record model="ir.ui.view" id="view_lop_tree">
+			<field name="name">lop.tree</field>
+			<field name="model">lop</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh mục loại sản phẩm">
+					<field name="nganh" string="Ngành:"/>
+					<field name="tenlop" string="Lớp:"/>
+					<field name="nienkhoa" string="Khoá:"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--Lớp form view-->
+		<record model="ir.ui.view" id="view_lop_form">
+			<field name="name">lop.form</field>
+			<field name="model">lop</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Sản phẩm">
+					<field name="nganh" string="Ngành:"/>
+					<field name="tenlop" string="Lớp:"/>
+					<field name="nienkhoa" string="Khoá:"/>
+				</form>
+			</field>
+		</record>
+
+
+
+		<!--Học sinh Action-->
+		<record model="ir.actions.act_window" id="action_hocsinh">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">hocsinh</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+		 <record model="ir.actions.act_window" id="action_hocsinh_tree">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">hocsinh</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+		 </record>
+
+		<!--Loại sản phẩm Action-->
+		<record model="ir.actions.act_window" id="action_lop">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">lop</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		 <record model="ir.actions.act_window" id="action_lop_tree">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">lop</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+
+	</data>
+</openerp>
